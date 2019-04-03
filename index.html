@@ -18,8 +18,10 @@
   ]">
 
 
+  <P> Filter for:
 
-    <ul ng-repeat="employee in employees">
+    <input ng-model="searchText"/></p>
+    <ul ng-repeat="employee in employees | filter:searchText |orderBy :'name'">
       <li>{{employee.name}}</li>
 
     </ul>
