@@ -10,10 +10,18 @@
 <!-- end of bootstrapcdn -->
 
   </head>
-  <body style="padding:50px">
-    <div class="alert alert-success">
-      <input type="text" ng-model="messegeText" placeholder="Enter a name here"><br>
-      This is "{{messegeText|uppercase}}" from AngularJs
-    </div>
+  <body style="padding:50px" ng-init="employees=[
+  {name:'Pramod Jana', dob:'10/03/1998'},
+  {name:'Shivani Konar', dob:'05/12/1997'},
+  {name:'Tanishi srivastava', dob:'15/12/1997'},
+  {name:'Pramod Jana', dob:'10/03/1998'},
+  ]">
+
+
+    <ul ng-repeat="employee in employees">
+      <li>{{employee.name}}</li>
+
+    </ul>
+
   </body>
 </html>
