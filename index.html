@@ -11,20 +11,28 @@
 
   </head>
   <body style="padding:50px" ng-init="employees=[
-  {name:'Pramod Jana', dob:'10/03/1998'},
-  {name:'Shivani Konar', dob:'05/12/1997'},
-  {name:'Tanishi srivastava', dob:'15/12/1997'},
-  {name:'Pramod Jana', dob:'10/03/1998'},
+  {name:'Pramod Jana', empCode:'ABC01',dob:'10/03/1998',address:'abc'},
+  {name:'Shivani Konar',  empCode:'ABC02',dob:'05/12/1997',address:'def'},
+  {name:'Tanishi srivastava',  empCode:'ABC03',dob:'15/12/1997',address:'ghi'},
+  {name:'Pramod Jana', empCode:'ABC04', dob:'10/03/1998',address:'jkl'},
   ]">
 
 
-  <P> Filter for:
+  <p>
 
-    <input ng-model="searchText"/></p>
-    <ul ng-repeat="employee in employees | filter:searchText |orderBy :'name'">
-      <li>{{employee.name}}</li>
+    <input placeholder="search for ..." ng-model="searchText" style="padding:3px; border-radius:5px;"/></p>
+    <div class="card" ng-repeat="employee in employees | filter : searchText"
+    style="width:300px; float:left; margin-right:10px">
 
-    </ul>
+      <div class="card-header text-white bg-primary">
+        {{employee.name}}
+      </div>
+      <div class="card-body">
+        Employee code : {{employee.empCode}} </br>
+        Date of Birth : {{employee.dob}} </br>
+        Address : {{employee.address}}
+      </div>
+    </div>
 
   </body>
 </html>
