@@ -10,17 +10,13 @@
 <!-- end of bootstrapcdn -->
 
   </head>
-  <body style="padding:50px" ng-init="employees=[
-  {name:'Pramod Jana', empCode:'ABC01',dob:'10/03/1998',address:'abc'},
-  {name:'Shivani Konar',  empCode:'ABC02',dob:'05/12/1997',address:'def'},
-  {name:'Tanishi srivastava',  empCode:'ABC03',dob:'15/12/1997',address:'ghi'},
-  {name:'Pramod Jana', empCode:'ABC04', dob:'10/03/1998',address:'jkl'},
-  ]">
+  <body style="padding:50px" ng-controller="myController" >
 
 
   <p>
 
-    <input placeholder="search for ..." ng-model="searchText" style="padding:3px; border-radius:5px;"/></p>
+    <input placeholder="search for ..." ng-model="searchText"
+    style="padding:3px; border-radius:5px;"/></p>
     <div class="card" ng-repeat="employee in employees | filter : searchText"
     style="width:300px; float:left; margin-right:10px">
 
@@ -33,6 +29,21 @@
         Address : {{employee.address}}
       </div>
     </div>
+
+
+
+
+<script>
+function myController($scope) {
+  $scope.employees=[
+  {name:'Pramod Jana', empCode:'ABC01',dob:'10/03/1998',address:'abc'},
+  {name:'Shivani Konar',  empCode:'ABC02',dob:'05/12/1997',address:'def'},
+  {name:'Tanishi srivastava',  empCode:'ABC03',dob:'15/12/1997',address:'ghi'},
+  {name:'Pramod Jana', empCode:'ABC04', dob:'10/03/1998',address:'jkl'},
+  ];
+}
+
+</script>
 
   </body>
 </html>
