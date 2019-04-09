@@ -30,7 +30,27 @@
       </div>
     </div>
 
+<div style="clear:left">
+  <h3>Add new employee...</h3>
+    <div class="card-header text-white bg-primary">
+      <form name="new_employee_form">
+        <div class="card" ng-repeat="employee in employees | filter : searchText"
+        style="width:300px; float:left; margin-right:10px">
 
+
+          <div class="card-header text-white bg-primary">
+          <input type="text" placeholder="enter employee name here..." size="50" ng-model="new_employee_form"/>
+          </div>
+          <div class="card-body">
+            Employee code : {{employee.empCode}} </br>
+            Date of Birth : {{employee.dob}} </br>
+            Address : {{employee.address}}
+          </div>
+        </div>
+
+      </form>
+    </div>
+</div>
 
 
 <script>
