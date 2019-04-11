@@ -1,0 +1,7 @@
+installation steps
+1) install nodejs
+2) install angularcli
+	a)npm install -g @angular/cli
+
+3)creating project
+	a)ng new projectname(mean-course)
