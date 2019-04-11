@@ -5,3 +5,5 @@ installation steps
 
 3)creating project
 	a)ng new projectname(mean-course)
+
+4)run the command "ng serve"
