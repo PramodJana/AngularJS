@@ -7,10 +7,11 @@ import { post } from 'selenium-webdriver/http';
 })
 export class PostCreateComponent
 {
+    enteredValue="";
     newPost="NO CONTENT";
 
     onAddPost()
     {
-        this.newPost='The user\'s post';
+        this.newPost=this.enteredValue;
     }
 }
