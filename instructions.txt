@@ -10,3 +10,8 @@ installation steps
 
 5)Installing angular material
 	a)ng add @angular/material(if using latest version) or npm install -g @angular/cli
+
+
+
+how to create component
+ng g c test(COMPONENT NAME)
